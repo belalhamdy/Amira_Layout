@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/b07b596a10.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+        *{
+            font-family: 'Ubuntu', sans-serif;
+        }
+        body{
+            background-color: #1e1011;
+        }   
+        #mainprofile{
+            float: left;
+            width: 50vw;
+            height: 97vh;
+            overflow: hidden;
+            background-color: black;
+            border-radius: 50px;
+            position: relative;
+        } 
+        #profile{
+            z-index: 2;
+            overflow: hidden;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 7px;
+            top: 7px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition-property: all;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+        }    
+        #profileimage{
+            position: absolute;
+            width: 100%;
+            
+        }
+        #name{
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            text-align: center;
+            font-size: 30px;
+            left: 50%;
+            top: 4%;
+            z-index: 10;
+            transform: translate(-50%,-50%);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        #name p{
+            color: white;
+            display: inline-block;
+            font-weight: bold;
+            margin:10px;
+        }
+        #footer{
+            width: 90%;
+            height: 100px;
+            
+            position: absolute;
+            z-index: 20;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #like{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%; 
+            font-size: 50px;
+            text-align: center;
+            color: white;
+            transition-property: all;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+        }
+        #like i{
+            margin-top: 8px;
+            transition-property: all;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+        }
+        #like p{
+            margin: 0px;
+            font-size: 30px;
+        }
+        #caption{
+            float: left;
+            /* overflow-y: scroll; */
+            padding: 5px;
+            margin-left:20px; 
+            margin-right:20px;
+            border-radius: 20px;  
+            background: rgba(0, 0, 0, 0.7);
+            width: 300px;
+            height: 90px;
+        }
+        #caption p{
+            color: white;
+            text-align: center;
+        }
+        #like:hover i {
+            color: rgb(54, 22, 194);
+            transform: scale(1.1)
+        }
+        #like:hover #comment{
+            color: #20a737
+        }
+        #like:hover{
+            transform: scale(1.2);
+            background-color: white;
+            color: black;
+        }
+        #profile:hover {
+            transform: scale(1.2) translate(5px,5px);
+        }
+        #comments{
+            float: left;
+            width: 48%;
+            margin-left: 10px;
+            height: 97vh;
+            overflow-y: scroll;
+            border-radius: 50px;
+
+        }
+        #cmdata{
+            position: relative;
+            width: 80%;
+            height: 150px;
+            margin: auto;
+            border-radius: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+        #cmwrite{
+            width: 48%;
+            float: right;
+            margin-top: 0px; 
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="mainprofile">
+        <div id="name"><p>Belal Hamdy</p></div>
+        <div id="profileimage">
+        <img style="transform: scale(1.5)" src="https://picsum.photos/id/238/700">
+        </div>
+        <div id="profile">
+                <img style="width: 190px; margin-left:-60px;  height: 150px;" src="https://picsum.photos/id/231/700" alt="">
+        </div>
+        <div id="footer">
+            <div id="like"><i class="fas fa-thumbs-up"></i><p>180</p></div>
+            <div id="caption"><p>This the Caption of the post w hwa fe el scrolling bayz lw t3rfy t3mleh yb2a 3amlty m3aya el wageb This the Caption of the post w hwa fe el scrolling bayz lw t3rfy t3mleh yb2a 3amlty m3aya el wageb</p></div>
+            <div id="like"><i id="comment" class="fas fa-comment"></i><p>180</p></div>
+        </div> 
+    </div>
+    <div id="comments">
+        <div id="cmdata">
+            <div id="profile" style="width: 60px; height:60px;">
+                <img style="width: 160px; margin-left:-60px;  height: 150px;" src="https://picsum.photos/id/231/700" alt="">
+        </div>
+        <div>
+            <div id="name" style="top: 5%;"><p style="font-size: 15px; margin:5px;">Belal Hamdy</p></div> 
+        </div>
+        <div>
+            <div id="caption" style="width: 350px; height:80px; position: absolute; top: 25%; left: 12%;"><p>This the Caption of the post w hwa fe el scrolling bayz lw t3rfy t3mleh yb2a 3amlty m3aya el wageb</p></div> 
+        </div>
+        </div>
+        <br>
+        <div id="cmdata">
+            <div id="profile" style="width: 60px; height:60px;">
+                <img style="width: 160px; margin-left:-60px;  height: 150px;" src="https://picsum.photos/id/231/700" alt="">
+        </div>
+        <div>
+            <div id="name" style="top: 5%;"><p style="font-size: 15px; margin:5px;">Belal Hamdy</p></div> 
+        </div>
+        <div>
+            <div id="caption" style="width: 350px; height:80px; position: absolute; top: 25%; left: 12%;"><p>This the Caption of the post w hwa fe el scrolling bayz lw t3rfy t3mleh yb2a 3amlty m3aya el wageb</p></div> 
+        </div>
+        </div>
+        <br>
+        <div id="cmdata">
+            <div id="profile" style="width: 60px; height:60px;">
+                <img style="width: 160px; margin-left:-60px;  height: 150px;" src="https://picsum.photos/id/238/700" alt="">
+        </div>
+        <div>
+            <div id="name" style="top: 5%;"><p style="font-size: 15px; margin:5px;">Belal Hamdy</p></div> 
+        </div>
+        <div>
+            <div id="caption" style="width: 350px; height:80px; position: absolute; top: 25%; left: 12%;"><p>This the Caption of the post w hwa fe el scrolling bayz lw t3rfy t3mleh yb2a 3amlty m3aya el wageb</p></div> 
+        </div>
+        </div>
+        <br>
+        <div id="cmdata">
+            <div id="profile" style="width: 60px; height:60px;">
+                <img style="width: 160px; margin-left:-60px;  height: 150px;" src="https://picsum.photos/id/238/700" alt="">
+        </div>
+        <div>
+            <div id="name" style="top: 5%;"><p style="font-size: 15px; margin:5px;">Belal Hamdy</p></div> 
+        </div>
+        <div>
+            <div id="caption" style="width: 350px; height:80px; position: absolute; top: 25%; left: 12%;"><p>This the Caption of the post w hwa fe el scrolling bayz lw t3rfy t3mleh yb2a 3amlty m3aya el wageb</p></div> 
+        </div>
+         </div>
+         <br>
+         <div id="cmdata">
+            <div id="profile" style="width: 60px; height:60px;">
+                <img style="width: 160px; margin-left:-60px;  height: 150px;" src="https://picsum.photos/id/238/700" alt="">
+        </div>
+        <div>
+            <div id="name" style="top: 5%;"><p style="font-size: 15px; margin:5px;">Belal Hamdy</p></div> 
+        </div>
+        <div>
+            <div id="caption" style="width: 350px; height:80px; position: absolute; top: 25%; left: 12%;"><p>This the Caption of the post w hwa fe el scrolling bayz lw t3rfy t3mleh yb2a 3amlty m3aya el wageb</p></div> 
+        </div>
+        </div>
+        </div>
+        
+    
+</body>
+</html>
