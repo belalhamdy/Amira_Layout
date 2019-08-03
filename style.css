@@ -1,0 +1,25 @@
+.firstSection {
+    padding: 3em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.photo {
+    width: 50%;
+}
+.imgContainer {
+    text-align: center;
+
+}
+h2 {
+    text-transform: uppercase;
+}
+.img {
+    width: 230px;
+    height: 230px;
+    border: 1px solid #aaa transparent;
+    border-radius: 50%;
+}
+.data {
+    width: 50%;
+}
